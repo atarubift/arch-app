@@ -1,0 +1,45 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* home */
+.centerImg {
+    font-size:0;
+    margin-bottom:15px;
+    text-align:center;
+    }
+
+ .centerImg > * {
+     width:49%;
+     margin-bottom:15px;
+     margin-left:2%;
+     display:inline-block;
+     font-size:12px;
+    }
+.centerImg > *:nth-child(2n + 1) {
+    margin-left:0;
+}
+.centerImg img {
+    max-width:100%;
+}
+
+/* universal */
+
+body {
+    padding-top: 50px;
+  }
+  
+  section {
+    overflow: auto;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .center h1 {
+    margin-bottom: 10px;
+  }
