@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'static_pages/help'
-  get 'static_pages/insect'
-  get 'static_pages/fish'
-  get 'static_pages/reaf'
-  get 'static_pages/fusion'
-  get 'static_pages/diy'
-  get 'static_pages/other'
+  get 'help'   => 'static_pages#help'
+  get 'insect' => 'static_pages#insect'
+  get 'fish'   => 'static_pages#fish'
+  get 'reaf'   => 'static_pages#reaf'
+  get 'fusion' => 'static_pages#fusion'
+  get 'diy'    => 'static_pages#diy'
+  get 'other'  => 'static_pages#other'
 end

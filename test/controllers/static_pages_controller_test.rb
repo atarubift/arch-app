@@ -8,43 +8,43 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get help" do
-    get static_pages_help_url
+    get help_path
     assert_response :success
     assert_select "title", "Help | ACNH-checkbox"
   end
 
   test "should get insect" do
-    get static_pages_insect_url
+    get insect_path
     assert_response :success
     assert_select "title", "Insect | ACNH-checkbox"
   end
 
   test "should get fish" do
-    get static_pages_fish_url
+    get fish_path
     assert_response :success
     assert_select "title", "Fish | ACNH-checkbox"
   end
 
   test "should get reaf" do
-    get static_pages_reaf_url
+    get reaf_path
     assert_response :success
     assert_select "title", "Reaf | ACNH-checkbox"
   end
 
   test "should get fusion" do
-    get static_pages_fusion_url
+    get fusion_path
     assert_response :success
     assert_select "title", "Fusion | ACNH-checkbox"
   end
 
   test "should get diy" do
-    get static_pages_diy_url
+    get diy_path
     assert_response :success
     assert_select "title", "Diy | ACNH-checkbox"
   end
 
   test "should get other" do
-    get static_pages_other_url
+    get other_path
     assert_response :success
     assert_select "title", "Other | ACNH-checkbox"
   end
