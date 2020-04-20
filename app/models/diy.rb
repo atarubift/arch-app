@@ -1,0 +1,2 @@
+class Diy < ApplicationRecord
+end

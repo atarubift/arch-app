@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
   end
 
   def fish
+    @fish = Fish.all
   end
 
   def reaf

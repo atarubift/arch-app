@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_20_015252) do
+ActiveRecord::Schema.define(version: 2020_04_20_062114) do
+
+  create_table "diys", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "fish", force: :cascade do |t|
+    t.string "name"
+    t.string "size"
+    t.string "price"
+    t.string "place"
+    t.string "season"
+    t.string "time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "fossils", force: :cascade do |t|
+    t.string "name"
+    t.string "parts"
+    t.string "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "insects", force: :cascade do |t|
     t.string "name"
@@ -18,6 +43,18 @@ ActiveRecord::Schema.define(version: 2020_04_20_015252) do
     t.string "place"
     t.string "season"
     t.string "time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "musics", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reafs", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
