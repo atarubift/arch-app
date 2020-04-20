@@ -1,2 +1,9 @@
 <% provide(:title, "Reaf") %>
 <h1>家具のページ</h1>
+
+<% @reafs.each do |reaf| %>
+    <div class="check-block">
+        <input type="checkbox"><%= reaf.name %><br>
+    </div>
+    <% end %>
+</body>

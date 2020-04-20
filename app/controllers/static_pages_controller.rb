@@ -14,6 +14,7 @@ class StaticPagesController < ApplicationController
   end
 
   def reaf
+    @reafs = Reaf.all
   end
 
   def fusion
