@@ -30,7 +30,9 @@ CSV.foreach('db/fossil.csv', headers: true) do |row|
 end
 
 CSV.foreach('db/music.csv', headers: true) do |row|
-    Music.create!(name:  row['name'])
+    Music.create!(name:  row['name'],
+                  image_name: row['image_name'],
+                  )
 end
 
 CSV.foreach('db/diy.csv', headers: true) do |row|

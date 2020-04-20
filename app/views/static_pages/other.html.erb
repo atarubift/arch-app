@@ -12,4 +12,12 @@
         <span>売　値:</span><br><%= fossil.price %><br>
     </div>
     <% end %>
+
+    <h2>ミュージック</h2>
+    <% @musics.each do |music| %>
+    <div class="music-block">
+        <%= image_tag  "#{music.image_name}" %>
+        <input type="checkbox"><%= music.name %><br>
+    </div>
+    <% end %>
 </body>

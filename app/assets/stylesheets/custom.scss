@@ -115,3 +115,18 @@ h1, h2, h3, h4, h5, h6 {
     width: 250px;
     height: 170px
   }
+
+  .music-block{
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 2em;
+    font-weight: bold;
+    border: solid 3px #000000;
+    text-align: left;
+    width: 300px;
+  }
+  
+  .music-block img{
+    width: 275px;
+    height: 200px
+  }
