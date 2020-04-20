@@ -4,7 +4,7 @@
 <p>出現月は北半球です。</p>
 
     <% @insects.each do |insect| %>
-    <div class="insect-block">
+    <div class="check-block">
         <%= image_tag  "#{insect.image_name}" %>
         <input type="checkbox"><%= insect.name %><br>
         <span>売　値:</span><%= insect.price %><br>
