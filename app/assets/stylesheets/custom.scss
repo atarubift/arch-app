@@ -93,11 +93,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .insect-block{
     display: inline-block;
-    padding: 20px;
-    background-color: #ffffff;
-    height: 100px;
+    padding: 0.5em 1em;
+    margin: 2em;
+    font-weight: bold;
+    border: solid 3px #000000;
+    text-align: left;
+    width: 300px;
   }
-
-  .insect-element{
-    display: inline-block;
+  .insect-block span{
+    text-align: center;
   }

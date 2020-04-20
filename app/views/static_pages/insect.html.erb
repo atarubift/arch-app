@@ -2,11 +2,15 @@
 <h1>むし</h1>
 <body>
 <p>出現月は北半球です。</p>
+
     <% @insects.each do |insect| %>
-        <%= insect.name %>
-        <%= insect.price %>
-        <%= insect.place %>
-        <%= insect.season %>
-        <%= insect.time %>
+    <div class="insect-block">
+        <%= image_tag  "#{insect.image_name}" %>
+        <input type="checkbox"><%= insect.name %><br>
+        <span>売　値:</span><%= insect.price %><br>
+        <span>場　所:</span><%= insect.place %><br>
+        <span>季　節:</span><%= insect.season %><br>
+        <span>時間帯:</span><%= insect.time %><br>
+    </div>
     <% end %>
 </body>

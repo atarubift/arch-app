@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_04_20_062114) do
 
   create_table "diys", force: :cascade do |t|
@@ -36,6 +37,9 @@ ActiveRecord::Schema.define(version: 2020_04_20_062114) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+=======
+ActiveRecord::Schema.define(version: 2020_04_20_072546) do
+>>>>>>> insectPage
 
   create_table "insects", force: :cascade do |t|
     t.string "name"
@@ -45,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_04_20_062114) do
     t.string "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image_name"
   end
 
   create_table "musics", force: :cascade do |t|
