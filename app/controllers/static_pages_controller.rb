@@ -21,6 +21,7 @@ class StaticPagesController < ApplicationController
   end
 
   def diy
+    @diys = Diy.all
   end
 
   def other

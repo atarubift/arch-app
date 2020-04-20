@@ -1,2 +1,9 @@
 <% provide(:title, "Diy") %>
 <h1>DIYのページ</h1>
+
+<% @diys.each do |diy| %>
+    <div class="check-block">
+        <input type="checkbox"><%= diy.name %><br>
+    </div>
+    <% end %>
+</body>
