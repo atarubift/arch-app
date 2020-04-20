@@ -91,10 +91,13 @@ h1, h2, h3, h4, h5, h6 {
 
   /* insect */
 
-  .insect{
+  .insect-block{
     display: inline-block;
-    color: #123456;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 3px #000000;
+    padding: 20px;
+    background-color: #ffffff;
+    height: 100px;
+  }
+
+  .insect-element{
+    display: inline-block;
   }
