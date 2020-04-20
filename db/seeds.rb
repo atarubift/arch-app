@@ -22,9 +22,10 @@ CSV.foreach('db/fish.csv', headers: true) do |row|
 end
 
 CSV.foreach('db/fossil.csv', headers: true) do |row|
-    Fossil.create!(name:  row['name'],
-                  parts:  row['parts'],
-                  price:  row['price'],
+    Fossil.create!(name:       row['name'],
+                  parts:       row['parts'],
+                  price:       row['price'],
+                  image_name:  row['image_name'],
                   )
 end
 

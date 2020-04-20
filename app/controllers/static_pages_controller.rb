@@ -25,6 +25,7 @@ class StaticPagesController < ApplicationController
   end
 
   def other
+    @fossils = Fossil.all
   end
 end
 
