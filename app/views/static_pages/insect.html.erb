@@ -1,7 +1,12 @@
 <% provide(:title, "Insect") %>
-<h1>虫用のページ</h1>
+<h1>むし</h1>
 <body>
+<p>出現月は北半球です。</p>
     <% @insects.each do |insect| %>
-        <%= insect.name %><br>
+        <input type="checkbox"><%= insect.name %><br>
+        売値：<%= insect.price %><br>
+        場所：<%= insect.place %><br>
+        出現月：<%= insect.season %><br>
+        時間帯：<%= insect.time %><br><br>
     <% end %>
 </body>
