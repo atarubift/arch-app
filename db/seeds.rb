@@ -11,11 +11,13 @@ CSV.foreach('db/insect.csv', headers: true) do |row|
 end
 
 CSV.foreach('db/fish.csv', headers: true) do |row|
-    Fish.create!(name:   row['name'],
-                  price:  row['price'],
-                  place:  row['place'],
-                  season: row['season'],
-                  time:   row['time'],
+    Fish.create!(name:       row['name'],
+                 size:       row['size'],
+                 price:      row['price'],
+                 place:      row['place'],
+                 season:     row['season'],
+                 time:       row['time'],
+                 image_name: row['image_name'],
                   )
 end
 
