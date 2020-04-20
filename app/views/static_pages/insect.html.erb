@@ -1,2 +1,7 @@
 <% provide(:title, "Insect") %>
 <h1>虫用のページ</h1>
+<body>
+    <% @insects.each do |insect| %>
+        <%= insect.name %><br>
+    <% end %>
+</body>

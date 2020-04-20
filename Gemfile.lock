@@ -82,6 +82,7 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    csv (3.0.4)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
@@ -251,6 +252,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (>= 2.15)
+  csv
   guard
   guard-minitest
   image_processing (~> 1.2)

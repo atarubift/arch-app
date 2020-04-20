@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def insect
+    @insects = Insect.all
   end
 
   def fish
