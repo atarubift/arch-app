@@ -1,0 +1,2 @@
+class Fusion < ApplicationRecord
+end

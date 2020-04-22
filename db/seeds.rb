@@ -42,3 +42,10 @@ end
 CSV.foreach('db/reaf.csv', headers: true) do |row|
     Reaf.create!(name:  row['name'])
 end
+
+CSV.foreach('db/fusion.csv', headers: true) do |row|
+    Fusion.create!(name:  row['name'],
+                   sort: row['sort'],
+                   get:  row['get'],
+                  )
+end
