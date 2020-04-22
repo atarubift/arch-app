@@ -1,2 +1,104 @@
 <% provide(:title, "Fusion") %>
+<body>
 <h1>服のページ</h1>
+
+<h2>トップス</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "topps"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+<h2>ボトムス</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "bottoms"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+<h2>ワンピース</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "dress"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+<h2>かぶりもの</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "cap"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+<h2>アクセサリー</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "accessory"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+<h2>アクセサリー</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "accessory"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+<h2>くつした</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "soocks"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+    <h2>くつ</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "shoes"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+    <h2>バッグ</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "bag"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+
+    <h2>かさ</h2>
+    <% @fusions.each do |fusion| %>
+    <% if fusion.sort == "umbrella"%>
+    <div class="check-block">
+        <input type="checkbox"><%= fusion.name %><br>
+        <span>入手：</span><%= fusion.get %><br>
+    </div>
+    <% end %>
+    <% end %>
+</body>

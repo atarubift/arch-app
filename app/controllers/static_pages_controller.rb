@@ -18,6 +18,7 @@ class StaticPagesController < ApplicationController
   end
 
   def fusion
+    @fusions = Fusion.all
   end
 
   def diy
