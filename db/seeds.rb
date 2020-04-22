@@ -55,3 +55,10 @@ CSV.foreach('db/floorboads.csv', headers: true) do |row|
                    sort: row['sort'],
                   )
 end
+
+CSV.foreach('db/lag.csv', headers: true) do |row|
+    Lag.create!(name: row['name'],
+                size: row['size'],
+                sort: row['sort'],
+                )
+end

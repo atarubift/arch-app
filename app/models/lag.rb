@@ -1,0 +1,2 @@
+class Lag < ApplicationRecord
+end
