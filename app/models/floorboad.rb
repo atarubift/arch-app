@@ -1,0 +1,2 @@
+class Floorboad < ApplicationRecord
+end

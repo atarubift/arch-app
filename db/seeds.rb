@@ -49,3 +49,9 @@ CSV.foreach('db/fusion.csv', headers: true) do |row|
                    get:  row['get'],
                   )
 end
+
+CSV.foreach('db/floorboads.csv', headers: true) do |row|
+    Floorboad.create!(name:  row['name'],
+                   sort: row['sort'],
+                  )
+end
