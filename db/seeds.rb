@@ -56,6 +56,12 @@ CSV.foreach('db/floorboads.csv', headers: true) do |row|
                   )
 end
 
+CSV.foreach('db/wallpaoer.csv', headers: true) do |row|
+    Wallpaper.create!(name:  row['name'],
+                   sort: row['sort'],
+                  )
+end
+
 CSV.foreach('db/lag.csv', headers: true) do |row|
     Lag.create!(name: row['name'],
                 size: row['size'],

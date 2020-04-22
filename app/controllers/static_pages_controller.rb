@@ -26,8 +26,11 @@ class StaticPagesController < ApplicationController
   end
 
   def other
-    @fossils = Fossil.all
-    @musics = Music.all
+    @wallpapers = Wallpaper.all
+    @floorboads = Floorboad.all
+    @lags       = Lag.all
+    @fossils    = Fossil.all
+    @musics     = Music.all
   end
 end
 
