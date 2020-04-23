@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'fusion' => 'static_pages#fusion'
   get 'diy'    => 'static_pages#diy'
   get 'other'  => 'static_pages#other'
+  get 'signup' => 'users#new'
 end
