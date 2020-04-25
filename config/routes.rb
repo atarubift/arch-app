@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get 'diy'    => 'static_pages#diy'
   get 'other'  => 'static_pages#other'
   get 'signup' => 'users#new'
+  get 'login'  => 'sessions#new'
+  get 'login'  => 'sessions#create'
+  get 'logout' => 'sessions#destroy'
   resources :users
 end
