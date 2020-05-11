@@ -1,2 +1,16 @@
-<h1>Other#lag</h1>
-<p>Find me in app/views/other/lag.html.erb</p>
+<% provide(:title, "ラグ") %>
+<h2>ラグ</h2>
+
+<%= form_for(:lagCheck, url: lag_path) do |f| %>
+  <% @lags.each do |lag| %>
+    <div class="check-block">
+      <%= f.check_box 'lag[][:check]', {checked: lag.check == true}, "#{lag.name}", "false" %>
+        <span>名　前:</span><%= lag.name %><br>
+        <span>大きさ:</span><%= lag.size %><br>
+        <span>入　手:</span><%= lag.sort %><br>
+    </div>
+    <% end %>
+    <%= f.submit "保存" %>
+  <% end %>
+</body>
+

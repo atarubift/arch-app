@@ -11,25 +11,6 @@
   </ul>
 
 
-
-<h2>ゆかいた</h2>
-<% @floorboads.each do |floorboad| %>
-    <div class="fossil-block">
-        <input type="checkbox"><%= floorboad.name %><br>
-        <span>入手:</span><%= floorboad.sort %><br>
-    </div>
-    <% end %>
-
-    <h2>ラグ</h2>
-<% @lags.each do |lag| %>
-    <div class="fossil-block">
-        <input type="checkbox"><%= lag.name %><br>
-        <span>大きさ:</span><%= lag.size %><br>
-        <span>入　手:</span><%= lag.sort %><br>
-    </div>
-    <% end %>
-
-
 <h2>化石</h2>
 <p>売値はパーツ順に対応してます。</p>
     <% @fossils.each do |fossil| %>

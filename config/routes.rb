@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get    'floorboads' => 'other#floorboads'
   post   'floorboads' => 'other#checkFlb'
   get    'lag'        => 'other#lag'
+  post   'lag'        => 'other#checkLag'
   get    'fossil'     => 'other#fossil'
   get    'music'      => 'other#music'
   get    'signup'     => 'users#new'

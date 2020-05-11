@@ -60,4 +60,25 @@ class OtherController < ApplicationController
     end
     redirect_to floorboads_path
   end
+
+  def checkLag
+    i = 1
+    j = 0
+    params[:lagCheck][:lag].each do |title|
+      if i <= lag.count + 1
+        if title.values != ["false"]
+          @lagChk = Lag.find_by(name: title.values)
+          @lagChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @lagChk = Lag.find_by(id: i-j)
+          @lagChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to lag_path
+  end
 end
