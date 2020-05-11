@@ -82,6 +82,28 @@ class StaticPagesController < ApplicationController
     redirect_to fish_path
   end
 
+
+  def checkFus
+    i = 1
+    j = 0
+    params[:fusionCheck][:fusion].each do |title|
+      if i <= Fusion.count + 1
+        if title.values != ["false"]
+          @fusChk = Fusion.find_by(name: title.values)
+          @fusChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @fusChk = Fusion.find_by(id: i-j)
+          @fusChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to fusion_path
+  end
+
    private
      def post_params
        params.require(:insectCheck).permit(:check)
