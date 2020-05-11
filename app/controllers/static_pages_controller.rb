@@ -125,6 +125,27 @@ class StaticPagesController < ApplicationController
     redirect_to reaf_path
   end
 
+  def checkDiy
+    i = 1
+    j = 0
+    params[:diyCheck][:diy].each do |title|
+      if i <= Diy.count + 1
+        if title.values != ["false"]
+          @diyChk = Diy.find_by(name: title.values)
+          @diyChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @diyChk = Diy.find_by(id: i-j)
+          @diyChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to diy_path
+  end
+  
    private
      def post_params
        params.require(:insectCheck).permit(:check)

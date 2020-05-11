@@ -1,9 +1,13 @@
 <% provide(:title, "Diy") %>
 <h1>DIYのページ</h1>
 
+<%= form_for( :diyCheck , url: diy_path) do |f| %>
 <% @diys.each do |diy| %>
     <div class="check-block">
-        <input type="checkbox"><%= diy.name %><br>
+    <%= f.check_box 'diy[][:check]', {checked: diy.check == true}, "#{diy.name}", "false" %>
+        <span>名前:</span><%= diy.name %><br>
     </div>
     <% end %>
+    <%= f.submit "保存"%>
+<% end %>
 </body>
