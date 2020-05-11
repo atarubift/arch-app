@@ -40,7 +40,7 @@ class StaticPagesController < ApplicationController
     # p params[:insectCheck][:insect]
     # cookies.permanent[:check] = params[:insectCheck][:check]
     params[:insectCheck][:insect].each do |title|
-      if i <= 81
+      if i <= Insect.count + 1
         if title.values != ["false"]
           @insectChk = Insect.find_by(name: title.values)
           p "@insectChk=#{@insectChk.id}"
