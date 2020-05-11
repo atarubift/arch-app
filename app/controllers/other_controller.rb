@@ -102,4 +102,25 @@ class OtherController < ApplicationController
     end
     redirect_to fossil_path
   end
+
+  def checkMus
+    i = 1
+    j = 0
+    params[:musicCheck][:music].each do |title|
+      if i <= Music.count + 1
+        if title.values != ["false"]
+          @musicChk = Music.find_by(name: title.values)
+          @musicChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @musicChk = Music.find_by(id: i-j)
+          @musicChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to music_path
+  end
 end

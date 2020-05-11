@@ -9,12 +9,4 @@
     <%= link_to "かせき", fossil_path, class: "btn btn-default" %>
     <%= link_to "ミュージック", music_path, class: "btn btn-default" %>
   </ul>
-
-    <h2>ミュージック</h2>
-    <% @musics.each do |music| %>
-    <div class="music-block">
-        <%= image_tag  "#{music.image_name}" %>
-        <input type="checkbox"><%= music.name %><br>
-    </div>
-    <% end %>
 </body>

@@ -1,2 +1,14 @@
-<h1>Other#music</h1>
-<p>Find me in app/views/other/music.html.erb</p>
+<% provide(:title, "ミュージック") %>
+<h2>ミュージック</h2>
+<body>
+  <%= form_for(:musicCheck, url: music_path) do |f| %>
+    <% @musics.each do |music| %>
+      <div class="music-block">
+        <%= image_tag  "#{music.image_name}" %>
+        <%= f.check_box 'music[][:check]', {checked: music.check == true}, "#{music.name}", "false" %>
+        <span>名　前:</span><%= music.name %><br>
+      </div>
+    <% end %>
+    <%= f.submit "保存" %>
+  <% end %>
+</body>

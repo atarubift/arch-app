@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get    'fossil'     => 'other#fossil'
   post   'fossil'     => 'other#checkFos'
   get    'music'      => 'other#music'
+  post   'music'      => 'other#checkMus'
   get    'signup'     => 'users#new'
   get    'login'      => 'sessions#new'
   post   'login'      => 'sessions#create'
