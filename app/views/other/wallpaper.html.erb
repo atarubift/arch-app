@@ -1,0 +1,14 @@
+<%provide(:title, "かべがみ") %>
+<h2>かべがみ</h2>
+
+<%= form_for( :wallpaperCheck, url: wallpaper_path) do |f| %>
+  <% @wallpapers.each do |wallpaper| %>
+    <div class="check-block">
+      <%= f.check_box 'wallpaper[][:check]', {checked: wallpaper.check == true}, "#{wallpaper.name}", "false" %>
+        <span>名　前:</span><%= wallpaper.name %><br>
+        <span>入　手:</span><%= wallpaper.sort %><br>
+    </div>
+    <% end %>
+    <%= f.submit "保存" %>
+  <% end %>
+</body>

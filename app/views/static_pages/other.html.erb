@@ -2,19 +2,21 @@
 <body>
 <h1>その他のページ</h1>
 
+<ul class="centerImg">
+    <%= link_to "かべがみ", wallpaper_path, class: "btn btn-default" %>
+    <%= link_to "ゆかいた", floorboads_path, class: "btn btn-default" %>
+    <%= link_to "ラグ", lag_path, class: "btn btn-default" %>
+    <%= link_to "かせき", fossil_path, class: "btn btn-default" %>
+    <%= link_to "ミュージック", music_path, class: "btn btn-default" %>
+  </ul>
+
+
+
 <h2>ゆかいた</h2>
 <% @floorboads.each do |floorboad| %>
     <div class="fossil-block">
         <input type="checkbox"><%= floorboad.name %><br>
         <span>入手:</span><%= floorboad.sort %><br>
-    </div>
-    <% end %>
-
-<h2>かべがみ</h2>
-<% @wallpapers.each do |wallpaper| %>
-    <div class="fossil-block">
-        <input type="checkbox"><%= wallpaper.name %><br>
-        <span>入手:</span><%= wallpaper.sort %><br>
     </div>
     <% end %>
 
