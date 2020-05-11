@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get    'lag'        => 'other#lag'
   post   'lag'        => 'other#checkLag'
   get    'fossil'     => 'other#fossil'
+  post   'fossil'     => 'other#checkFos'
   get    'music'      => 'other#music'
   get    'signup'     => 'users#new'
   get    'login'      => 'sessions#new'

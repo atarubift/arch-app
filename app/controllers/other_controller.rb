@@ -23,7 +23,7 @@ class OtherController < ApplicationController
     i = 1
     j = 0
     params[:wallpaperCheck][:wallpaper].each do |title|
-      if i <= wallpaper.count + 1
+      if i <= Wallpaper.count + 1
         if title.values != ["false"]
           @wallpaperChk = Wallpaper.find_by(name: title.values)
           @wallpaperChk.update_attribute(:check, "true")
@@ -65,7 +65,7 @@ class OtherController < ApplicationController
     i = 1
     j = 0
     params[:lagCheck][:lag].each do |title|
-      if i <= lag.count + 1
+      if i <= Lag.count + 1
         if title.values != ["false"]
           @lagChk = Lag.find_by(name: title.values)
           @lagChk.update_attribute(:check, "true")
@@ -80,5 +80,26 @@ class OtherController < ApplicationController
       end
     end
     redirect_to lag_path
+  end
+
+  def checkFos
+    i = 1
+    j = 0
+    params[:fossilCheck][:fossil].each do |title|
+      if i <= Fossil.count + 1
+        if title.values != ["false"]
+          @fissilChk = Fossil.find_by(name: title.values)
+          @fossilChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @fossilChk = Fossil.find_by(id: i-j)
+          @fossilChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to fossil_path
   end
 end

@@ -10,18 +10,6 @@
     <%= link_to "ミュージック", music_path, class: "btn btn-default" %>
   </ul>
 
-
-<h2>化石</h2>
-<p>売値はパーツ順に対応してます。</p>
-    <% @fossils.each do |fossil| %>
-    <div class="fossil-block">
-        <%= image_tag  "#{fossil.image_name}" %>
-        <input type="checkbox"><%= fossil.name %><br>
-        <span>パーツ:</span><%= fossil.parts %><br>
-        <span>売　値:</span><br><%= fossil.price %><br>
-    </div>
-    <% end %>
-
     <h2>ミュージック</h2>
     <% @musics.each do |music| %>
     <div class="music-block">
