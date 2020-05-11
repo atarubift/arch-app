@@ -104,6 +104,27 @@ class StaticPagesController < ApplicationController
     redirect_to fusion_path
   end
 
+  def checkRef
+    i = 1
+    j = 0
+    params[:reafCheck][:reaf].each do |title|
+      if i <= Reaf.count + 1
+        if title.values != ["false"]
+          @refChk = Reaf.find_by(name: title.values)
+          @refChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @refChk = Reaf.find_by(id: i-j)
+          @refChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to reaf_path
+  end
+
    private
      def post_params
        params.require(:insectCheck).permit(:check)

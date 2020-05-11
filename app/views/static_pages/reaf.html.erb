@@ -1,9 +1,13 @@
 <% provide(:title, "Reaf") %>
 <h1>家具のページ</h1>
 
+<%= form_for( :reafCheck , url: reaf_path) do |f| %>
 <% @reafs.each do |reaf| %>
     <div class="check-block">
-        <input type="checkbox"><%= reaf.name %><br>
+    <%= f.check_box 'reaf[][:check]', {checked: reaf.check == true}, "#{reaf.name}", "false"%>
+        <span>名　前:</span><%= reaf.name %><br>
     </div>
     <% end %>
+    <%= f.submit "保存" %>
+  <% end %>
 </body>

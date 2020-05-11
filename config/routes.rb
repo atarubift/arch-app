@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'fish'   => 'static_pages#fish'
   post "fish" => "static_pages#checkFis"
   get 'reaf'   => 'static_pages#reaf'
+  post 'reaf'   => 'static_pages#checkRef'
   get 'fusion' => 'static_pages#fusion'
   post 'fusion' => 'static_pages#checkFus'
   get 'diy'    => 'static_pages#diy'
