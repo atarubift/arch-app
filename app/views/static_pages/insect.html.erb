@@ -3,14 +3,22 @@
 <body>
 <p>出現月は北半球です。</p>
 
+  <%= form_for(:insectCheck, url: insect_path) do |f| %>
+  <%#= f.collection_check_boxes :check, Insect.all, :id, :name %>
     <% @insects.each do |insect| %>
     <div class="check-block">
         <%= image_tag  "#{insect.image_name}" %>
-        <input type="checkbox"><%= insect.name %><br>
-        <span>売　値:</span><%= insect.price %><br>
-        <span>場　所:</span><%= insect.place %><br>
-        <span>季　節:</span><%= insect.season %><br>
-        <span>時間帯:</span><%= insect.time %><br>
+        <%= f.check_box 'insect[][:check]', {checked: insect.check == true}, "#{insect.name}", "false" %><span>名　前:</span><%= insect.name %><br>
+        <%#= check_box_tag "check", "#{insect}", (insect == params[:check]) %> 
+        <%#<span>id:</span><%= insect.id %>
+         <span>売　値:</span><%= insect.price %><br> 
+         <span>場　所:</span><%= insect.place %><br>
+         <span>季　節:</span><%= insect.season %><br>
+         <span>時間帯:</span><%= insect.time %><br>
+         <%# <span>chk:</span><%= insect.check %>
     </div>
-    <% end %>
+      <% end %>
+     <%= f.submit "保存" %>
+  <% end %>
+    <%# <input type="submit" name="insects[check]" value="保存" class="btn btn-primary"> %>
 </body>

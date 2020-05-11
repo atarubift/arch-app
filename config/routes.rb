@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'help'   => 'static_pages#help'
   get 'insect' => 'static_pages#insect'
+  post 'insect' => 'static_pages#checkIns'
   get 'fish'   => 'static_pages#fish'
   get 'reaf'   => 'static_pages#reaf'
   get 'fusion' => 'static_pages#fusion'
