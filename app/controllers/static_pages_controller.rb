@@ -61,6 +61,27 @@ class StaticPagesController < ApplicationController
     redirect_to insect_path
   end
 
+  def checkFis
+    i = 1
+    j = 0
+    params[:fishCheck][:fish].each do |title|
+      if i <= Fish.count + 1
+        if title.values != ["false"]
+          @fishChk = Fish.find_by(name: title.values)
+          @fishChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @fishChk = Fish.find_by(id: i-j)
+          @fishChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to fish_path
+  end
+
    private
      def post_params
        params.require(:insectCheck).permit(:check)

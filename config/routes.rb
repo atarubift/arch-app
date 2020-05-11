@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'insect' => 'static_pages#insect'
   post 'insect' => 'static_pages#checkIns'
   get 'fish'   => 'static_pages#fish'
+  post "fish" => "static_pages#checkFis"
   get 'reaf'   => 'static_pages#reaf'
   get 'fusion' => 'static_pages#fusion'
   get 'diy'    => 'static_pages#diy'

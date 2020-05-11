@@ -3,15 +3,19 @@
 <body>
 <p>出現月は北半球です。</p>
 
+  <%= form_for( :fishCheck , url: fish_path) do |f| %>
     <% @fish.each do |fish| %>
-    <div class="check-block">
-        <%= image_tag  "#{fish.image_name}" %>
-        <input type="checkbox"><%= fish.name %><br>
-        <span>魚　影:</span><%= fish.size %><br>
-        <span>売　値:</span><%= fish.price %><br>
-        <span>場　所:</span><%= fish.place %><br>
-        <span>季　節:</span><%= fish.season %><br>
-        <span>時間帯:</span><%= fish.time %><br>
-    </div>
+      <div class="check-block">
+          <%= image_tag  "#{fish.image_name}" %>
+          <%= f.check_box 'fish[][:check]', { checked: fish.check == true}, "#{fish.name}", "false" %>
+          <span>名　前:</span><%= fish.name%><br>
+          <span>魚　影:</span><%= fish.size %><br>
+          <span>売　値:</span><%= fish.price %><br>
+          <span>場　所:</span><%= fish.place %><br>
+          <span>季　節:</span><%= fish.season %><br>
+          <span>時間帯:</span><%= fish.time %><br>
+      </div>
+      <% end %>
+      <%= f.submit "保存"%>
     <% end %>
 </body>
