@@ -1,2 +1,14 @@
-<h1>Other#floorboads</h1>
-<p>Find me in app/views/other/floorboads.html.erb</p>
+<% provide(:title, "ゆかいた") %>
+<h2>ゆかいた</h2>
+
+<%= form_for(:floorboadCheck, url: floorboads_path) do |f| %>
+  <% @floorboads.each do |floorboad| %>
+    <div class="check-block">
+      <%= f.check_box 'floorboad[][:check]', {checked: floorboad.check == true}, "#{floorboad.name}", "false" %>
+        <span>名　前:</span><%= floorboad.name %><br>
+        <span>入　手:</span><%= floorboad.sort %><br>
+    </div>
+    <% end %>
+    <%= f.submit "保存" %>
+  <% end %>
+</body>

@@ -39,4 +39,25 @@ class OtherController < ApplicationController
     end
     redirect_to wallpaper_path
   end
+
+  def checkFlb
+    i = 1
+    j = 0
+    params[:floorboadCheck][:floorboad].each do |title|
+      if i <= Floorboad.count + 1
+        if title.values != ["false"]
+          @floorboadChk = Floorboad.find_by(name: title.values)
+          @floorboadChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @floorboadChk = Floorboad.find_by(id: i-j)
+          @floorboadChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to floorboads_path
+  end
 end

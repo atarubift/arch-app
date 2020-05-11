@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get    'wallpaper'  => 'other#wallpaper'
   post   'wallpaper'  => 'other#checkWpp'
   get    'floorboads' => 'other#floorboads'
+  post   'floorboads' => 'other#checkFlb'
   get    'lag'        => 'other#lag'
   get    'fossil'     => 'other#fossil'
   get    'music'      => 'other#music'
