@@ -6,6 +6,9 @@
     <div class="check-block">
     <%= f.check_box 'reaf[][:check]', {checked: reaf.check == true}, "#{reaf.name}", "false"%>
         <span>名　前:</span><%= reaf.name %><br>
+        <span>買　値:</span><%= reaf.price %><br>
+        <span>売　値:</span><%= reaf.sales %><br>
+        <span>入　手:</span><%= reaf.get %><br>
     </div>
     <% end %>
     <%= f.submit "保存" %>
