@@ -36,7 +36,11 @@ CSV.foreach('db/music.csv', headers: true) do |row|
 end
 
 CSV.foreach('db/diy.csv', headers: true) do |row|
-    Diy.create!(name:  row['name'])
+    Diy.create!(name:  row['name'],
+                get1:  row['get1'],
+                get2:  row['get2'],
+                sort:  row['sort'],
+                )
 end
 
 CSV.foreach('db/reaf.csv', headers: true) do |row|

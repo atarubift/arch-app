@@ -5,7 +5,10 @@
 <% @diys.each do |diy| %>
     <div class="check-block">
     <%= f.check_box 'diy[][:check]', {checked: diy.check == true}, "#{diy.name}", "false" %>
-        <span>名前:</span><%= diy.name %><br>
+        <span>名　前:</span><%= diy.name %><br>
+        <span>入　手:</span><%= diy.get1%><br>
+        <% if diy.get2 != "nil" %><span>　　　 </span><%= diy.get2 %><br><% end %>
+        <span>種　類:</span><%= diy.sort %><br>
     </div>
     <% end %>
     <%= f.submit "保存"%>
