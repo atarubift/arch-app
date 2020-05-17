@@ -61,8 +61,10 @@ end
 
 CSV.foreach('db/floorboads.csv', headers: true) do |row|
     Floorboad.create!(name:  row['name'],
-                   sort: row['sort'],
-                  )
+                      price: row['price'],
+                      sales: row['sales'],
+                      get:   row['get'],
+                    )
 end
 
 CSV.foreach('db/wallpaoer.csv', headers: true) do |row|

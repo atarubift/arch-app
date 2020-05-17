@@ -6,7 +6,9 @@
     <div class="check-block">
       <%= f.check_box 'floorboad[][:check]', {checked: floorboad.check == true}, "#{floorboad.name}", "false" %>
         <span>名　前:</span><%= floorboad.name %><br>
-        <span>入　手:</span><%= floorboad.sort %><br>
+        <span>買　値:</span><%= floorboad.price %><br>
+        <span>売　値:</span><%= floorboad.sales %><br>
+        <span>入　手:</span><%= floorboad.get %><br>
     </div>
     <% end %>
     <%= f.submit "保存" %>
