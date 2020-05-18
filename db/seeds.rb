@@ -69,8 +69,10 @@ end
 
 CSV.foreach('db/wallpaoer.csv', headers: true) do |row|
     Wallpaper.create!(name:  row['name'],
-                   sort: row['sort'],
-                  )
+                      price: row['price'],
+                      sales: row['sales'],
+                      get:   row['get'],
+                     )
 end
 
 CSV.foreach('db/lag.csv', headers: true) do |row|
