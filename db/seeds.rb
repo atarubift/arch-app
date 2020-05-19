@@ -77,7 +77,9 @@ end
 
 CSV.foreach('db/lag.csv', headers: true) do |row|
     Lag.create!(name: row['name'],
+                price: row['price'],
+                sales: row['sales'],
                 size: row['size'],
-                sort: row['sort'],
+                get: row['get'],
                 )
 end
