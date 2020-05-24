@@ -54,8 +54,10 @@ end
 
 CSV.foreach('db/fusion.csv', headers: true) do |row|
     Fusion.create!(name:  row['name'],
-                   sort: row['sort'],
-                   get:  row['get'],
+                   price: row['price'],
+                   sales: row['sales'],
+                   get: row['get'],
+                   sort:  row['sort'],
                   )
 end
 
