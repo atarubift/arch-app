@@ -1,0 +1,17 @@
+
+<% provide(:title, "Art") %>
+<body>
+  <h1>美術品</h1>
+
+  <%= form_for( :artCheck , url: art_path) do |f| %>
+    <% @arts.each do |art| %>
+      <div class="check-block">
+        <%= f.check_box 'art[][:check]', {checked: art.check == true}, "#{art.name}", "false" %>
+          <span>名　前:</span><%= art.name %><br>
+          <span>本　物：</span><%= art.real %><br>
+          <span>偽　物：</span><%= art.fake %><br>
+      </div>
+    <% end %>
+    <%= f.submit "保存" %>
+  <% end %>
+</body>

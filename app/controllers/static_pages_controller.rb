@@ -26,6 +26,10 @@ class StaticPagesController < ApplicationController
     @diys = Diy.all
   end
 
+  def art
+    @arts = Art.all
+  end
+
   def other
     @wallpapers = Wallpaper.all
     @floorboads = Floorboad.all
@@ -144,6 +148,27 @@ class StaticPagesController < ApplicationController
       end
     end
     redirect_to diy_path
+  end
+
+  def checkArt
+    i = 1
+    j = 0
+    params[:artCheck][:art].each do |title|
+      if i <= Art.count + 1
+        if title.values != ["false"]
+          @artChk = Art.find_by(name: title.values)
+          @artChk.update_attribute(:check, "true")
+          j += 1
+        else
+          @diyChk = Art.find_by(id: i-j)
+          @diyChk.update_attribute(:check, "false")
+          i -= j
+          j = 0
+        end
+        i += 1
+      end
+    end
+    redirect_to art_path
   end
   
    private

@@ -7,10 +7,10 @@
       <div class="check-block">
         <%= f.check_box 'fusion[][:check]', {checked: fusion.check == true}, "#{fusion.name}", "false" %>
           <span>名　前:</span><%= fusion.name %><br>
-          <span>入　手：</span><%= fusion.price %><br>
-          <span>入　手：</span><%= fusion.sales %><br>
+          <span>買　値：</span><%= fusion.price %><br>
+          <span>売　値：</span><%= fusion.sales %><br>
           <span>入　手：</span><%= fusion.get %><br>
-          <span>入　手：</span><%= fusion.sort %><br>
+          <span>種　類：</span><%= fusion.sort %><br>
       </div>
     <% end %>
     <%= f.submit "保存" %>

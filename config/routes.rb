@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get    'diy'        => 'static_pages#diy'
   post   'diy'        => 'static_pages#checkDiy'
   get    'other'      => 'static_pages#other'
+  get    'art'        => 'static_pages#art'
+  post   'art'        => 'static_pages#checkArt'
   get    'wallpaper'  => 'other#wallpaper'
   post   'wallpaper'  => 'other#checkWpp'
   get    'floorboads' => 'other#floorboads'

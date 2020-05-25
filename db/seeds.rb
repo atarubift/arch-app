@@ -85,3 +85,10 @@ CSV.foreach('db/lag.csv', headers: true) do |row|
                 get: row['get'],
                 )
 end
+
+CSV.foreach('db/art.csv', headers: true) do |row|
+    Art.create!(name: row['name'],
+                real: row['real'],
+                fake: row['fake'],
+                )
+end
