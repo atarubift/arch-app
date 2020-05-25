@@ -48,4 +48,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Other | ACNH-checkbox"
   end
+
+  test "should get art" do
+    get art_path
+    assert_response :success
+    assert_select "title", "Art | ACNH-checkbox"
+  end
 end
